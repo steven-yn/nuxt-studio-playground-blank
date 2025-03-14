@@ -1,5 +1,8 @@
 <template>
-  <div class="alert" :style="{ 'border-color': color }">
+  <div
+    class="alert text-3xl font-bold underline"
+    :style="{ 'border-color': color }"
+  >
     <slot></slot>
   </div>
 </template>
@@ -8,9 +11,9 @@
 const { color } = defineProps({
   color: {
     type: String,
-    default: 'orange'
-  }
-})
+    default: "orange",
+  },
+});
 </script>
 
 <style scoped>
