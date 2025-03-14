@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.3.0",
+    "brace-expansion": "^4.0.0",
     "nuxt": "^3.16.0"
   }
 }
