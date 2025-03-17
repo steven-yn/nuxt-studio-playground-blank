@@ -6,7 +6,7 @@ export default defineContentConfig({
       type: "page",
       source: "**",
     }),
-    posts: defineCollection({
+    blog: defineCollection({
       type: "page",
       source: "blog/*.md",
       schema: z.object({
