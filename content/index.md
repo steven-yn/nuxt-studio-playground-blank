@@ -1,7 +1,8 @@
 ---
-description: 
-globs: 
+description:
+globs:
 ---
+
 # Welcome to Nuxt Content Starter
 
 This is the main page displaying Markdown located at [content/index.md](mdc:https:/github.com/larbish/starter/blob/content/content/index.md).
@@ -16,7 +17,7 @@ Create new pages or modify the existing ones in `content/` directory.
 
 You can find an example of querying contents and rendering them in a [catch-all page](mdc:https:/github.com/larbish/starter/blob/content/app/pages/%5B...slug%5D.vue)
 
-::aspect-ratio{src="https://raw.githubusercontent.com/nuxt/modules/main/icons/reka-ui.svg" :ratio="16/9"}
+::aspect-ratio{src="https://raw.githubusercontent.com/nuxt/modules/main/icons/reka-ui.svg" ratio="16/9"}
 ::
 
 ## Integrate Vue Component
