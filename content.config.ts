@@ -8,7 +8,10 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: "page",
-      source: "blog/*.md",
+      source: {
+        include: "blog/*.md",
+        prefix: "/blog",
+      },
       schema: z.object({
         draft: z.boolean().default(false),
         category: z.enum(["Alps", "Himalaya", "Pyrenees"]).optional(),
