@@ -28,6 +28,11 @@ const commonBlogSchema = z.object({
       }),
     })
   ),
+  accordion: z.array(z.object({
+    value: z.string(),
+    title: z.string(),
+    content: z.string(),
+  })),
 });
 
 export const collections = {

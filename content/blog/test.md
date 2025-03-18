@@ -1,10 +1,5 @@
-# Root page
-
-This is a test page.
-
-::single-accordion
 ---
-items:
+accordion:
   - value: item-1
     title: Is it accessible?
     content: Yes. It adheres to the WAI-ARIA design pattern.
@@ -14,6 +9,11 @@ items:
   - value: item-3
     title: Can it be animated?
     content: Yes! You can use the transition prop to configure the animation.
-default-value: item-1
 ---
+
+# Root page
+
+This is a test page.
+
+::single-accordion{defaultValue="item-1" :items="accordion"}
 ::
