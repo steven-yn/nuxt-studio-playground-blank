@@ -1,4 +1,5 @@
 import { defineCollection, z } from "@nuxt/content";
+import { asSeoCollection } from "@nuxtjs/seo/content";
 
 const commonContentSchema = z.object({
   title: z.string().nonempty(),
@@ -31,14 +32,25 @@ const commonBlogSchema = z.object({
 });
 
 export const collections = {
-  content: defineCollection({
-    type: "page",
-    source: "**",
-    schema: commonContentSchema,
-  }),
-  blog: defineCollection({
-    type: "page",
-    source: "**",
-    schema: commonBlogSchema,
-  }),
+  content: defineCollection(
+    asSeoCollection({
+      type: "page",
+      source: {
+        include: "**/*.md",
+        exclude: ["blog/**"],
+        prefix: "/",
+      },
+      schema: commonContentSchema,
+    })
+  ),
+  blog: defineCollection(
+    asSeoCollection({
+      type: "page",
+      source: {
+        include: "blog/**/*.md",
+        prefix: "/blog",
+      },
+      schema: commonBlogSchema,
+    })
+  ),
 };
