@@ -32,25 +32,21 @@ const commonBlogSchema = z.object({
 });
 
 export const collections = {
-  content: defineCollection(
-    asSeoCollection({
-      type: "page",
-      source: {
-        include: "**/*.md",
-        exclude: ["blog/**"],
-        prefix: "/",
-      },
-      schema: commonContentSchema,
-    })
-  ),
-  blog: defineCollection(
-    asSeoCollection({
-      type: "page",
-      source: {
-        include: "blog/**/*.md",
-        prefix: "/blog",
-      },
-      schema: commonBlogSchema,
-    })
-  ),
+  content: defineCollection({
+    type: "page",
+    source: {
+      include: "**/*.md",
+      exclude: ["blog/**"],
+      prefix: "/",
+    },
+    schema: commonContentSchema,
+  }),
+  blog: defineCollection({
+    type: "page",
+    source: {
+      include: "blog/**/*.md",
+      prefix: "/blog",
+    },
+    schema: commonBlogSchema,
+  }),
 };
