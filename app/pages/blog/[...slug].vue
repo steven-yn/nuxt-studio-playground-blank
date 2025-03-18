@@ -5,8 +5,5 @@ const { data: posts } = await useAsyncData("blog", () =>
 </script>
 
 <template>
-  <div>
-    <h1>Blog</h1>
-    <pre>{{ posts }}</pre>
-  </div>
+  <div><ContentRenderer v-if="posts" :value="posts" />></div>
 </template>
