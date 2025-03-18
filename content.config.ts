@@ -1,4 +1,5 @@
 import { defineCollection, z } from "@nuxt/content";
+import singleAccordionSchema from "./app/components/shared/single-accordion/schema.dto";
 
 const commonContentSchema = z.object({
   title: z.string().nonempty(),
@@ -28,11 +29,7 @@ const commonBlogSchema = z.object({
       }),
     })
   ),
-  accordion: z.array(z.object({
-    value: z.string(),
-    title: z.string(),
-    content: z.string(),
-  })),
+  singleAccordion: singleAccordionSchema,
 });
 
 export const collections = {

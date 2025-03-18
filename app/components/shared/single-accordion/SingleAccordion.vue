@@ -5,14 +5,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import type { SingleAccordionSchema } from "./schema.dto";
 
 defineProps<{
   defaultValue: string;
-  items: {
-    value: string;
-    title: string;
-    content: string;
-  }[];
+  items: SingleAccordionSchema;
 }>();
 </script>
 
