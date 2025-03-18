@@ -35,8 +35,8 @@ export const collections = {
   content: defineCollection({
     type: "page",
     source: {
-      include: "**/*.md",
-      exclude: ["blog/**"],
+      include: "*.md",
+      exclude: ["blog/*.md"],
       prefix: "/",
     },
     schema: commonContentSchema,
@@ -44,7 +44,7 @@ export const collections = {
   blog: defineCollection({
     type: "page",
     source: {
-      include: "blog/**/*.md",
+      include: "blog/*.md",
       prefix: "/blog",
     },
     schema: commonBlogSchema,
