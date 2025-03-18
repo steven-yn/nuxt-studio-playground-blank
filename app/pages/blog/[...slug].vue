@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData("blog", () =>
-  queryCollection("blog").path("/blog/test").first()
-);
+const route = useRoute();
+
+const { data: page } = await useAsyncData("page-" + route.path, () => {
+  return queryCollection("blog").path(route.path).first();
+});
 </script>
 
 <template>
-  <div><ContentRenderer v-if="posts" :value="posts" />></div>
+  <ContentRenderer v-if="page" :value="page" />
 </template>
