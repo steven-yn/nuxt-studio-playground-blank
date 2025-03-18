@@ -1,5 +1,5 @@
 ---
-accordion:
+singleAccordion:
   - value: item-1
     title: Is it accessible?
     content: Yes. It adheres to the WAI-ARIA design pattern.
@@ -15,5 +15,5 @@ accordion:
 
 This is a test page.
 
-::single-accordion{defaultValue="item-1" :items="accordion"}
+::single-accordion{defaultValue="item-1" :items="singleAccordion"}
 ::
